@@ -1,0 +1,75 @@
+<CP>:
+    orientation: 'vertical'
+    Label:
+        text: 'Character Planner Version 0.0.2'
+        font_size: 12
+        size: 600, 30
+        pos: 100, 570
+    BoxLayout:
+        orientation:'horizontal'
+        size: 800, 170
+        pos: root.x, 400
+        canvas:
+            Color:
+                rgba: (.588,.666,.682,.55)
+            Rectangle:
+                pos: self.pos
+                size:self.size
+    Label:
+        text: 'Current Level: '
+        font_size: 24
+        size: 100, 30
+        pos: 325, 525
+        color: .62,.078,.92,.75
+    Label:
+        text:'Alliance'
+        font_size:12
+        size:100,30
+        pos: 35, 400
+        color: .145,.102,.878,.55
+    CheckBox:
+        pos:.5, 365
+        color: .145,.102,.878,1
+    Label:
+        text:'Horde'
+        font_size:12
+        size:100,30
+        pos: 665, 400
+        color: .741, .078,.109, .7
+    CheckBox:
+        pos:695, 365
+        color: .741, .078,.109, 1
+    Label:
+        text: 'Quest and Monster Kills'
+        font_size: 12
+        size: 600, 30
+        pos: 100,370
+    BoxLayout:
+        size: 450, 365
+        pos:0, 0
+        #orientation: 'vertical'
+        #need to add height and width
+        canvas:
+            Color:
+                rgba: (.92,.71,.078,.55)
+            Rectangle:
+                pos: self.pos
+                size:self.size
+    BoxLayout:
+        orientation: 'horizontal'
+        pos:450,0
+        size:450, 365
+        canvas:
+            Color:
+                rgb: (.043,.109,.121)
+            Rectangle:
+                pos: self.pos
+                size:self.size
+    #Button:
+        #text:'Gear Planner'
+        #font_size:5
+        #size: 40,20
+        #pos: 760,0
+    ProgressBar:
+        size: 400, 20
+        pos: 200, 500
