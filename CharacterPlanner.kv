@@ -1,7 +1,7 @@
 <CP>:
     orientation: 'vertical'
     Label:
-        text: 'Character Planner Version 0.0.2'
+        text: 'Character Planner Version 0.0.3'
         font_size: 12
         size: 600, 30
         pos: 100, 570
@@ -40,7 +40,7 @@
         pos:695, 365
         color: .741, .078,.109, 1
     Label:
-        text: 'Quest and Monster Kills'
+        text: 'Quest and Monsters'
         font_size: 12
         size: 600, 30
         pos: 100,370
@@ -49,12 +49,9 @@
         pos:0, 0
         #orientation: 'vertical'
         #need to add height and width
-        canvas:
-            Color:
-                rgba: (.92,.71,.078,.55)
-            Rectangle:
-                pos: self.pos
-                size:self.size
+        Image:
+            source: 'parchment.jpg'
+            size:450, 365
     BoxLayout:
         orientation: 'horizontal'
         pos:450,0
@@ -73,3 +70,21 @@
     ProgressBar:
         size: 400, 20
         pos: 200, 500
+<SelectableLabel>:
+    #Draw a background to indicate selection
+    canvas.before:
+        Color:
+            rgba:(.0, 0.9, .1, .3) if self.selected else (0,0,0,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+<RV>:
+    viewclass: 'SelectableLabel'
+    RecycleBoxLayout:
+        default_size: None, dp(56)
+        default_size_hint: 1, none
+        size_hint_y: None
+        height: self.minimum_height
+        orientation: 'vertical'
+        multiselect: True
+        touch_multiselect: True
